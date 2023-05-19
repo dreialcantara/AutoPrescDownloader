@@ -39,7 +39,7 @@ const Presc = () => {
           rows={5}
         />
         <button className="mt-2 btn btn-success" type="submit">
-          Download Prescriçõess
+          Download Prescrições
         </button>
       </form>
     </div>
