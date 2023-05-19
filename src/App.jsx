@@ -1,6 +1,8 @@
 import Presc from "./components/Presc";
 import Invoic from "./components/Invoic";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "toastr/build/toastr.min.css";
+
 import "./App.css";
 
 function App() {
@@ -12,7 +14,7 @@ function App() {
         alt=""
       />
       <p className="display-4 header">PHARMACY DOWNLOAD MANAGER</p>
-      <div className="w-50 d-flex justify-content-between align-items-center mt-3">
+      <div className="w-50 d-flex justify-content-around align-items-center mt-3">
         <Presc />
         <Invoic />
       </div>

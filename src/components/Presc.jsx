@@ -1,4 +1,5 @@
 import { useState } from "react";
+import toastr from "toastr";
 
 const Presc = () => {
   const [listaPresc, setListaPresc] = useState("");
@@ -24,8 +25,29 @@ const Presc = () => {
     pedidos.forEach((pedido, index) => {
       setTimeout(() => {
         abrirLinkPresc(pedido);
+        if (index === pedidos.length - 1) {
+          toastr.success("Downloads Finalizados"); // Adiciona um alerta ao finalizar o loop
+        }
       }, index * 2000); // Atraso de 100ms entre cada abertura de link
     });
+  };
+
+  toastr.options = {
+    closeButton: true,
+    debug: false,
+    newestOnTop: false,
+    progressBar: false,
+    positionClass: "toast-top-full-width",
+    preventDuplicates: false,
+    onclick: null,
+    showDuration: "300",
+    hideDuration: "1000",
+    timeOut: "5000",
+    extendedTimeOut: "1000",
+    showEasing: "swing",
+    hideEasing: "linear",
+    showMethod: "fadeIn",
+    hideMethod: "fadeOut",
   };
 
   return (

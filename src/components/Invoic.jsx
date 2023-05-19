@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { abrirLinkInvoic } from "../functions/abrirLinkInvoic";
+import toastr from "toastr";
 
 const Invoic = () => {
   const [listaInvoic, setListaInvoic] = useState("");
@@ -18,6 +19,9 @@ const Invoic = () => {
     pedidos.forEach((pedido, index) => {
       setTimeout(() => {
         abrirLinkInvoic(pedido);
+        if (index === pedidos.length - 1) {
+          toastr.success("Downloads Finalizados"); // Adiciona um alerta ao finalizar o loop
+        }
       }, index * 2000); // Atraso de 100ms entre cada abertura de link
     });
   };
