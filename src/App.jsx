@@ -7,13 +7,13 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="mt-1 w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+    <div className="mt-1 w-100 h-100 d-flex flex-column justify-content-around align-items-center">
       <img
         className="img-fluid"
         src="https://ai-jobs.net/media/company/logo/22/04/MenofManual.png"
         alt=""
       />
-      <p className="display-4 header">PHARMACY DOWNLOAD MANAGER</p>
+      <p className="text-center display-4 header">PHARMACY DOWNLOAD MANAGER</p>
       <div className="w-50 d-flex justify-content-around align-items-center mt-3">
         <Presc />
         <Invoic />
