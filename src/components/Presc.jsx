@@ -28,7 +28,7 @@ const Presc = () => {
           setUltimoDownload(new Date()); // Armazena a hora do último download
           toastr.success("Downloads Finalizados");
         }
-      }, index * 2000);
+      }, index * 3000);
     });
   };
 
@@ -67,11 +67,16 @@ const Presc = () => {
           <div className="overlay">
             <div className="spinner"></div>
           </div>
-        )}<div className="d-flex justify-content-around "><p className="mt-2 last text-center">Último download  </p>
-        {ultimoDownload && (
-          <p className="mt-2 last text-center"> {ultimoDownload.toLocaleTimeString()}</p>
-        )}</div>
-        
+        )}
+        <div className="d-flex justify-content-around ">
+          <p className="mt-2 last text-center">Último download </p>
+          {ultimoDownload && (
+            <p className="mt-2 last text-center">
+              {" "}
+              {ultimoDownload.toLocaleTimeString()}
+            </p>
+          )}
+        </div>
       </form>
     </div>
   );
