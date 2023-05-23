@@ -2,6 +2,7 @@ import Presc from "./components/Presc";
 import Invoic from "./components/Invoic";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "toastr/build/toastr.min.css";
+import { Analytics } from "@vercel/analytics/react";
 
 import "./App.css";
 
@@ -18,6 +19,7 @@ function App() {
         <Presc />
         <Invoic />
       </div>
+      <Analytics />
     </div>
   );
 }
